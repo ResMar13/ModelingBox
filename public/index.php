@@ -15,6 +15,9 @@ define('APP_BASE_URL', '/boxmodeling');
     } catch (e) {}
 })();
 </script>
+<!-- Bootstrap 5.3.8, hébergé localement (pas de CDN). Chargé AVANT style.css pour que
+     le design personnalisé et les thèmes de l'application restent prioritaires. -->
+<link rel="stylesheet" href="<?= APP_BASE_URL ?>/assets/vendor/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?= APP_BASE_URL ?>/assets/css/style.css">
 </head>
 <body>
@@ -106,6 +109,9 @@ define('APP_BASE_URL', '/boxmodeling');
     </div>
 </div>
 
+<!-- Bootstrap JS (inclut Popper) : disponible pour ses composants (modales, dropdowns...),
+     mais non utilisé par le code actuel afin de ne rien changer au fonctionnement existant. -->
+<script src="<?= APP_BASE_URL ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 <script src="<?= APP_BASE_URL ?>/assets/js/boxmodel.js" defer></script>
 </body>
 </html>
